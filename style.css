@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Kumbh+Sans:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 50px 5px 50px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.navbar {
+  margin: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  margin: 10px;
+}
+
+.navbar ul li {
+  color: hsl(219, 9%, 45%);
+}
+
+.left-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-nav img {
+  width: 30px;
+  margin: 10px;
+}
+
+hr {
+  width: 90%;
+  margin: auto;
+  opacity: 0.5;
+}
+
+.main-content {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding-top: 20px;
+  margin: auto;
+}
+
+.product-img {
+  width: 100%;
+}
+
+.product-details {
+  width: 60%;
+  margin-top: 60px;
+  padding-left: 0px;
+  line-height: 1.5;
+}
+
+.product-details h4 {
+  color: hsl(26, 100%, 55%);
+  letter-spacing: 0.75;
+}
+
+.product-details h1 {
+  word-spacing: 2.9;
+  line-height: 0.85;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.product-details p {
+  color: hsl(219, 9%, 45%);
+}
+
+.amount {
+  display: flex;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+.fifty {
+  /* width: 100%; */
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  padding: 0px 10px 0px 10px;
+  font-size: small;
+  font-weight: 900;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
+.main-product-img {
+  width: 100%;
+}
+
+.main-product-img img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.thumbnail {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+.thumbnail img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.price > p {
+  color: hsl(219, 9%, 45%);
+  font-size: small;
+  text-decoration: line-through;
+}
+
+.addtocart {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.item-counter {
+  background-color: hsl(223, 64%, 98%);
+  padding: 5px 20px 5px 20px;
+  display: flex;
+  gap: 30px;
+  border-radius: 5px;
+}
+
+.plus-minus {
+  color: hsl(26, 100%, 55%);
+  font-weight: bold;
+}
+
+.addtocart button {
+  background-color: hsl(26, 100%, 55%);
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 25px 10px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* justify-content: space-between; */
+  color: hsl(0, 0%, 100%);
+}
+
+.addtocart button img {
+  width: 20px;
+}
+
+@media (width <= 768px) {
+  nav {
+    margin: 20px;
+    /* display: none; */
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 25px 0 25px;
+  }
+
+  .product-details {
+    margin-top: 10px;
+  }
+
+  .product-img {
+    display: grid;
+  }
+
+  .product-details,
+  .product-img {
+    width: 100%;
+    /* margin-top: 10px; */
+    /* margin-bottom: 5px; */
+  }
+
+  .product-details h1 {
+    padding-top: 5px;
+  }
+  .addtocart {
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: 100px; */
+  }
+
+  .addtocart span {
+    margin-left: 1px;
+    margin-right: 80px;
+  }
+
+  .addtocart button {
+    justify-content: center;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price h3 {
+    margin-right: 10px;
+  }
+
+  /* Hamburger menu */
+
+  /* .hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background-color: none;
+    outline: none;
+    border: none;
+  }
+
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+
+  .hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -7px);
+  }
+
+  .hamburger.is-active .bar {
+    opacity: 0;
+  } */
+}
+
+@media (width <= 688) {
+    
+}
